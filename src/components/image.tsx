@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { ImageProps } from "../types/index.js";
-import "../styles/style.css";
 
-export default ({ src, alt, ...props }: ImageProps) => {
+export default ({ src, alt, style, ...props }: ImageProps) => {
   // Local state
   const [loaded, setLoaded] = useState(false);
   const [imageSrc, setImageSrc] = useState<HTMLImageElement>();
@@ -39,6 +38,7 @@ export default ({ src, alt, ...props }: ImageProps) => {
           height: props.height || imageSrc?.height || 200,
           overflow: "hidden",
           position: "relative",
+          ...style,
         }}
         className={props.className}
       >

@@ -4,9 +4,29 @@
   "version": "0.0.0",
   "type": "module",
   "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.js"
+    },
+    "./lib/styles/index.css": "./lib/styles/index.css"
+  },
+  "author": {
+    "name": "dilane3",
+    "email": "komboudilane125@gmail.com",
+    "url": "https://dilane3.com",
+    "twitter": "https://twitter.com/dilanekombou",
+    "github": "https://github.com/dilane3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rasengan/@rasengan/image",
+    "issues": "https://github.com/rasengan/@rasengan/image/issues"
+  },
   "scripts": {
-    "build": "tsc",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+    "build": "tsc && cp -r src/styles lib/",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "pack": "npm pack --pack-destination ./../../packages/@rasengan/image"
   },
   "peerDependencies": {
     "react": "^18.2.0"
