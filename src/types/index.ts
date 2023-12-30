@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import React, { CSSProperties } from "react";
 
 /**
  * Props for the Image component
@@ -8,8 +8,8 @@ export type ImageProps = {
   alt: string;
   width?: CSSProperties["width"];
   height?: CSSProperties["height"];
-  className?: string;
-  style?: { [key: string]: any };
+  className?: React.HTMLProps<HTMLDivElement>["className"];
+  style?: React.HTMLProps<HTMLDivElement>["style"];
   loading?: "lazy" | "eager";
   mode?: "blur" | "wave";
   objectfit?: CSSProperties["objectFit"];

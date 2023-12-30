@@ -1,7 +1,7 @@
 {
   "name": "@rasengan/image",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "1.0.0",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -20,9 +20,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rasengan/@rasengan/image",
-    "issues": "https://github.com/rasengan/@rasengan/image/issues"
+    "url": "https://github.com/rasengan/rasengan-image",
+    "issues": "https://github.com/rasengan/rasengan-image/issues"
   },
+  "license": "MIT",
   "scripts": {
     "build": "tsc && cp -r src/styles lib/",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
