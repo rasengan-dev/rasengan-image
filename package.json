@@ -1,5 +1,5 @@
 {
-  "name": "@rasengan/image",
+  "name": "@rasenganjs/image",
   "private": false,
   "version": "1.0.0",
   "type": "module",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rasengan/rasengan-image",
+    "url": "https://github.com/rasengan/rasengan-image.git",
     "issues": "https://github.com/rasengan/rasengan-image/issues"
   },
   "license": "MIT",
@@ -28,7 +28,7 @@
     "build": "tsc && cp -r src/styles lib/",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "pack": "npm pack --pack-destination ./../../packages/@rasengan/image",
-    "deploy": "npm deploy --access public"
+    "deploy": "npm publish --access public"
   },
   "peerDependencies": {
     "react": "^18.2.0"
