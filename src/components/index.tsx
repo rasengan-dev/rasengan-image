@@ -13,7 +13,14 @@ export const LazyImage = ({
   ...props
 }: ImageProps) => {
   return (
-    <React.Suspense fallback={<LoadingFallback />}>
+    <React.Suspense
+      fallback={
+        <LoadingFallback
+          width={props.width || 200}
+          height={props.height || 200}
+        />
+      }
+    >
       {/* Use lazy-loaded image component */}
       <LazyLoadedImage
         src={src}

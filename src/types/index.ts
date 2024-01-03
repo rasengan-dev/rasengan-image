@@ -15,3 +15,8 @@ export type ImageProps = {
   objectfit?: CSSProperties["objectFit"];
   onClick?: () => void;
 };
+
+export type LoadingFallbackProps = {
+  width?: CSSProperties["width"];
+  height?: CSSProperties["height"];
+}

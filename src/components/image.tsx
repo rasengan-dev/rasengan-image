@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ImageProps } from "../types/index.js";
+import { ImageProps, LoadingFallbackProps } from "../types/index.js";
 
 export default ({ src, alt, style, ...props }: ImageProps) => {
   // Local state
@@ -79,4 +79,12 @@ export default ({ src, alt, style, ...props }: ImageProps) => {
 };
 
 // Fallback component to show while the image is loading
-export const LoadingFallback = () => <div>Loading...</div>;
+export const LoadingFallback = ({ width, height }: LoadingFallbackProps) => (
+  <div
+    style={{
+      width,
+      height,
+      backgroundColor: "#e5e5e5",
+    }}
+  ></div>
+);
