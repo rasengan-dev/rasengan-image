@@ -1,7 +1,8 @@
 {
   "name": "@rasenganjs/image",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.1.0",
+  "description": "Image component provided by RasenganJS to display images with ease",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -20,8 +21,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rasengan/rasengan-image.git",
-    "issues": "https://github.com/rasengan/rasengan-image/issues"
+    "url": "https://github.com/rasengan-dev/rasengan-image.git",
+    "issues": "https://github.com/rasengan-dev/rasengan-image/issues"
   },
   "license": "MIT",
   "scripts": {
