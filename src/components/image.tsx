@@ -1,8 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { ImageProps, LoadingFallbackProps } from "../types/index.js";
-import { uniqueId } from "../utils/index.js";
-
-
 
 export default ({
   src,
@@ -15,7 +12,8 @@ export default ({
   const [loaded, setLoaded] = useState(false);
   const [startLoading, setStartLoading] = useState(false);
   const [imageSrc, setImageSrc] = useState<HTMLImageElement>();
-  const [id] = useState(uniqueId()); // Generate unique ID for image element
+  // Reference
+  const imageContainerRef = useRef<HTMLDivElement | null>(null);
 
   // Effects
 
@@ -52,7 +50,6 @@ export default ({
         // If image is in the viewport, load it
         if (entry.isIntersecting) {
           setStartLoading(true);
-          observer.disconnect();
         }
       },
       {
@@ -63,10 +60,14 @@ export default ({
     );
 
     // Observe the image element
-    const imageElement = document.getElementById(id);
+    const imageContainer = imageContainerRef.current;
 
-    if (imageElement) {
-      observer.observe(imageElement);
+    if (imageContainer) {
+      observer.observe(imageContainer);
+    }
+
+    return () => {
+      observer.disconnect();
     }
   }, []);
 
@@ -105,7 +106,7 @@ export default ({
   return (
     <>
       <div
-        id={id}
+        ref={imageContainerRef}
         style={{
           width: props.width || imageSrc?.width || 200,
           height: props.height || imageSrc?.height || 200,
