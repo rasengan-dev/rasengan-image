@@ -12,6 +12,7 @@ export default ({
   const [loaded, setLoaded] = useState(false);
   const [startLoading, setStartLoading] = useState(false);
   const [imageSrc, setImageSrc] = useState<HTMLImageElement>();
+  
   // Reference
   const imageContainerRef = useRef<HTMLDivElement | null>(null);
 
