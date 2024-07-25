@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/@rasenganjs%2Fimage.svg)](https://badge.fury.io/js/@rasenganjs%2Fimage)
 ![NPM Downloads](https://img.shields.io/npm/dm/%40rasenganjs%2Fimage)
-[![GitHub license](https://img.shields.io/github/license/rasengan-dev/rasengan-image)](https://github.com/rasengan-dev/create-rasengan/blob/main/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/rasengan-dev/rasengan-image)](https://github.com/rasengan-dev/rasengan-image/blob/main/LICENSE)
 
 An utility component for Image which offers a lazy loading behavior with a previewing animation for enhancing UX
 
